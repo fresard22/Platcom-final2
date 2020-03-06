@@ -1,26 +1,46 @@
 [
   {
     "semestre": 1,
-    "nombre": "asd"
-  },
-  {
-    "semestre": 2,
-    "nombre": "jkl"
+    "nombre": "Álgebra"
   },
   {
     "semestre": 1,
-    "nombre": "zxc"
-  },
-  {
-    "semestre": 3,
-    "nombre": "34534"
+    "nombre": "Geometría"
   },
   {
     "semestre": 2,
-    "nombre": "657867"
+    "nombre": "Química"
+  },
+  {
+    "semestre": 2,
+    "nombre": "Álgebra Lineal"
+  },
+  {
+    "semestre": 2,
+    "nombre": "Cálculo en una variable"
+  },
+  {
+    "semestre": 3,
+    "nombre": "Física: Mecánica"
+  },
+  {
+    "semestre": 3,
+    "nombre": "Ecuaciones Diferenciales"
+  },
+  {
+    "semestre": 3,
+    "nombre": "Cálculo en Varias Variables"
   },
   {
     "semestre": 4,
-    "nombre": " nvb"
+    "nombre": "Física: Ondas y Electromagnetismo"
+  },
+  {
+    "semestre": 4,
+    "nombre": "Métodos Numéricos"
+  },
+  {
+    "semestre": 4,
+    "nombre": "Estadística y Probabilidades"
   }
 ]
