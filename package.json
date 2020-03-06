@@ -28,6 +28,7 @@
     "passport": "^0.4.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-hook-form": "^4.10.2",
     "validator": "^12.2.0"
   },
   "devDependencies": {

@@ -5,7 +5,6 @@ import NProgress from "nprogress";
 import { theme, ThemeProvider } from "@chakra-ui/core";
 
 import { Auth } from "../src/client/components/Auth/Context";
-import Header from "../src/client/components/Header";
 
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
@@ -22,7 +21,6 @@ export default class MyApp extends App {
         }}
       >
         <Auth>
-          <Header />
           <Component {...pageProps} />
         </Auth>
       </ThemeProvider>
