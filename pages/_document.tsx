@@ -6,6 +6,8 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="stylesheet" type="text/css" href="/style.css" />
+          <link rel="stylesheet" type="text/css" href="/Drawer.css" />
+          <link rel="stylesheet" type="text/css" href="/Header.css" />
           <link rel="stylesheet" type="text/css" href="/nprogress.css" />
           <link
             href="https://fonts.googleapis.com/css?family=Lato&display=swap"

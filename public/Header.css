@@ -1,0 +1,48 @@
+header {
+  height: 100px;
+  background: #ebebeb;
+  padding: 0 100px;
+  display: grid;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+}
+.logo h1 {
+  font-family: "Montserrat";
+  margin: auto;
+  font-weight: 300;
+  letter-spacing: 5px;
+}
+.logo h1 span {
+  font-weight: 800;
+}
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navigation ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+.navigation ul li a {
+  display: block;
+  padding: 0 10px;
+  text-decoration: none;
+  color: green;
+  padding: 5px 10px;
+}
+
+.navigation ul li a:hover {
+  background: #000e31;
+  color: white;
+  border-radius: 30px;
+  color: Red;
+}
