@@ -41,8 +41,8 @@ header {
 }
 
 .navigation ul li a:hover {
-  background: #000e31;
+  background: #33775b;
   color: white;
   border-radius: 30px;
-  color: Red;
+  color: white;
 }
