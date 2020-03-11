@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import { useState } from "react";
 
-import { Box, Stack } from "@chakra-ui/core";
+import { Box, Stack, List, ListItem, ListIcon, Text } from "@chakra-ui/core";
 
 import ramos from "../ramos.json";
 import Header from "../src/client/components/Header";
@@ -22,7 +22,7 @@ const Index: NextPage = () => {
         setRamo={setRamoOpen}
       />
       {semestreOpen ? (
-        <Stack>
+        <List bg="#ebebeb">
           <Box>N° sem</Box>
           {ramos
             .filter(({ semestre }) => {
@@ -32,18 +32,22 @@ const Index: NextPage = () => {
               return (
                 <Box
                   width="200px"
-                  bg="tomato"
                   color="white"
                   key={key}
                   onClick={() => {
                     setRamoOpen(ramo.nombre);
                   }}
                 >
-                  {ramo.nombre}
+                  <ListItem>
+                    <ListIcon icon="check-circle" color="green.500" />
+                    <Text fontSize="md" color="black">
+                      {ramo.nombre}
+                    </Text>
+                  </ListItem>
                 </Box>
               );
             })}
-        </Stack>
+        </List>
       ) : (
         <>
           <VideoExplicativo />

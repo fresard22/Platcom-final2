@@ -24,7 +24,7 @@ function Header({ ramo, setSemester, setRamo }) {
                         setSemester(n);
                       }}
                     >
-                      {n} Semestre
+                      Semestre {n}
                     </a>
                   </li>
                 );
