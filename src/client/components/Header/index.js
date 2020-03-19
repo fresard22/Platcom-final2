@@ -10,7 +10,7 @@ function Header({ ramo, setSemester, setRamo }) {
           <div className="logo">
             <img className="log" src="/logo.svg" width="100px" height="100px" />
             <h1>
-              PLATCOM<span>FCI</span>
+              PLATCOM<span>FCI-UACh</span>
             </h1>
           </div>
           <nav className="navigation">
