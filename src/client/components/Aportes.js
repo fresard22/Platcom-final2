@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NewUrl from "./NewUrl";
 import { Box, Heading, Text, Stack, Icon } from "@chakra-ui/core";
+import axios from "axios";
 
 const Aportes = props => {
   const [data, setData] = useState([
@@ -9,10 +10,16 @@ const Aportes = props => {
       titulo: "PrimerAporte",
       descripcion: "Descripcion de mi aporte",
       url: "https://www.uach.cl",
-      nickname: "Tallo",
+      autor: "Tallo",
       likes: 0
     }
   ]);
+
+  useEffect(() => {
+    axios.post("/api/getAportes", { a: 1 }).then(response => {
+      setData([...data, ...response.data]);
+    });
+  }, []);
 
   const handleAporte = dataAporte => {
     setData([...data, dataAporte]);
@@ -20,6 +27,7 @@ const Aportes = props => {
 
   return (
     <div className="col col-md-10">
+      {JSON.stringify(data, null, 2)}
       <h1 className="d-inline-block col col-md-9">{props.ramo}</h1>
       {props.ramo === undefined ? (
         <h1>Seleccione un ramo</h1>
@@ -46,7 +54,7 @@ const Aportes = props => {
                   >
                     {aporte.titulo}
                   </h3>
-                  <p className="text-primary ">{aporte.nickname}</p>
+                  <p className="text-primary ">{aporte.autor}</p>
                 </div>
 
                 <div
