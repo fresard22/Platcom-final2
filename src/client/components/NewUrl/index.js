@@ -60,7 +60,7 @@ function NewUrl({ ramo, onAporte }) {
 
               <input
                 name="autor"
-                placeholder="Nickname"
+                placeholder="Autor"
                 ref={register({ required: true })}
               />
               {errors.autor && <h1>Error</h1>}
