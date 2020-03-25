@@ -2,67 +2,30 @@ import React from "react";
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
-  Button,
-  Input,
-  Icon,
-  useDisclosure,
-  Alert,
-  AlertIcon,
-  AlertTitle
+  useDisclosure
 } from "@chakra-ui/core";
+
 import { useForm } from "react-hook-form";
 
-function NewUrlForm({ ramo }) {
+function NewUrl({ ramo, onAporte }) {
+  const { isOpen, onOpen, onClose } = useDisclosure(false);
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = data => {
-    console.log(data);
+    data.ramo = ramo;
+    onAporte(data);
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <p>{ramo}</p>
-      <input name="titulo" ref={register({ required: true })} />
-
-      {errors.titulo && (
-        <>
-          <Alert status="error">
-            <AlertIcon />
-            <AlertTitle mr={2}>Ingrese título!</AlertTitle>
-          </Alert>
-        </>
-      )}
-
-      <input name="descripcion" ref={register({ required: true })} />
-      {errors.descripcion && "Ingrese descripcion!."}
-
-      <input name="link" ref={register({ required: true })} />
-      {errors.link && "Ingrese link!."}
-
-      <input name="autor" ref={register({ required: true })} />
-      {errors.autor && "Ingrese autor!."}
-
-      <input type="submit" />
-    </form>
-  );
-}
-
-function NewUrl({ ramo }) {
-  const { isOpen, onOpen, onClose } = useDisclosure(false);
-
-  return (
     <>
-      <img
+      <input
+        type="submit"
+        className="btn btn-lg btn-warning d-inline-block mb-3 ml-4"
+        value="Añadir Aporte"
         onClick={onOpen}
-        className="user-logo"
-        src="/logo.svg"
-        width="60px"
-        height="60px"
       />
       <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
@@ -71,7 +34,39 @@ function NewUrl({ ramo }) {
             Formulario de Aporte
           </DrawerHeader>
           <DrawerBody>
-            <NewUrlForm ramo={ramo} />
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <p>{ramo}</p>
+              <input
+                name="titulo"
+                placeholder="Titulo"
+                ref={register({ required: true })}
+              />
+
+              {errors.titulo && <h1>Error</h1>}
+
+              <input
+                name="descripcion"
+                placeholder="Descripcion"
+                ref={register({ required: true })}
+              />
+              {errors.descripcion && <h1>Error</h1>}
+
+              <input
+                name="link"
+                placeholder="Url"
+                ref={register({ required: true })}
+              />
+              {errors.link && <h1>Error</h1>}
+
+              <input
+                name="autor"
+                placeholder="Nickname"
+                ref={register({ required: true })}
+              />
+              {errors.autor && <h1>Error</h1>}
+
+              <input type="submit" />
+            </form>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
