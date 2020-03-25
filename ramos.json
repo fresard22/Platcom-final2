@@ -1,27 +1,27 @@
 [
   {
     "semestre": 1,
-    "nombre": "Álgebra"
+    "nombre": "Algebra"
   },
   {
     "semestre": 1,
-    "nombre": "Geometría"
+    "nombre": "Geometria"
   },
   {
     "semestre": 2,
-    "nombre": "Química"
+    "nombre": "Quimica"
   },
   {
     "semestre": 2,
-    "nombre": "Álgebra Lineal"
+    "nombre": "Algebra Lineal"
   },
   {
     "semestre": 2,
-    "nombre": "Cálculo en una variable"
+    "nombre": "Calculo en una variable"
   },
   {
     "semestre": 3,
-    "nombre": "Física: Mecánica"
+    "nombre": "Fisica: Mecanica"
   },
   {
     "semestre": 3,
@@ -29,15 +29,15 @@
   },
   {
     "semestre": 3,
-    "nombre": "Cálculo en Varias Variables"
+    "nombre": "Calculo en Varias Variables"
   },
   {
     "semestre": 4,
-    "nombre": "Física: Ondas y Electromagnetismo"
+    "nombre": "Fisica: Ondas y Electromagnetismo"
   },
   {
     "semestre": 4,
-    "nombre": "Métodos Numéricos"
+    "nombre": "Metodos Numericos"
   },
   {
     "semestre": 4,
