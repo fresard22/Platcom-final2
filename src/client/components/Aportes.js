@@ -27,7 +27,7 @@ const Aportes = props => {
 
   return (
     <div className="col col-md-10">
-      {JSON.stringify(data, null, 2)}
+      {/*JSON.stringify(data, null, 2)*/}
       <h1 className="d-inline-block col col-md-9">{props.ramo}</h1>
       {props.ramo === undefined ? (
         <h1>Seleccione un ramo</h1>
@@ -39,12 +39,15 @@ const Aportes = props => {
         .filter(obj => {
           return obj.ramo === props.ramo;
         })
-        .map(aporte => {
+        .map((aporte) => {
           return (
             <div className="accordion m-3" id="accordionExample">
               <div className="card">
                 <div className="card-header" id="headingOne">
+                  <button className="btn btn-info">Like</button>
                   <h6>{aporte.likes}</h6>
+                  <button className="btn btn-info">Dislike</button>
+
                   <h3
                     className="text-primary"
                     data-toggle="collapse"
@@ -54,9 +57,9 @@ const Aportes = props => {
                   >
                     {aporte.titulo}
                   </h3>
-                  <p className="text-primary ">{aporte.autor}</p>
+                  <p className="text-primary ">Autor:{aporte.autor}</p>
                 </div>
-
+                <h1>{key}</h1>
                 <div
                   id="collapseOne"
                   className="collapse show"
