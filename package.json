@@ -29,7 +29,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-hook-form": "^4.10.2",
-    "validator": "^12.2.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.0",
